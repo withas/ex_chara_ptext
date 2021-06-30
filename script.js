@@ -1,7 +1,10 @@
 (function() {
     'use strict';
     
+    // プラグインパラメータの読み込み
     const defaultColor = tyrano.plugin.kag.stat.mp.color ? tyrano.plugin.kag.stat.mp.color : "0xFFFFFF";
+    const separator = tyrano.plugin.kag.stat.mp.separator ? tyrano.plugin.kag.stat.mp.separator : "・";
+
     const _tyrano_plugin_kag_tag_chara_ptext_start = tyrano.plugin.kag.tag.chara_ptext.start;
 
     tyrano.plugin.kag.tag.chara_ptext.start = function(a) {
@@ -18,7 +21,7 @@
 
                 const t = this.kag.stat.charas[names[i]];
                 
-                if (i > 0) nameText += '＆';
+                if (i > 0) nameText += separator;
 
                 if (t) nameText += t.jname;
                 else nameText += names[i];
