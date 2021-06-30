@@ -1,7 +1,7 @@
 (function() {
     'use strict';
     
-    const defaultColor = tyrano.plugin.kag.stat.mp.color;
+    const defaultColor = tyrano.plugin.kag.stat.mp.color ? tyrano.plugin.kag.stat.mp.color : "0xFFFFFF";
 
     const _tyrano_plugin_kag_tag_chara_ptext_start = tyrano.plugin.kag.tag.chara_ptext.start;
     tyrano.plugin.kag.tag.chara_ptext.start = function(a) {
