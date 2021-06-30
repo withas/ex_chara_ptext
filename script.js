@@ -2,8 +2,8 @@
     'use strict';
     
     const defaultColor = tyrano.plugin.kag.stat.mp.color ? tyrano.plugin.kag.stat.mp.color : "0xFFFFFF";
-
     const _tyrano_plugin_kag_tag_chara_ptext_start = tyrano.plugin.kag.tag.chara_ptext.start;
+
     tyrano.plugin.kag.tag.chara_ptext.start = function(a) {
         $("." + this.kag.stat.chara_ptext).css("color", $.convertColor(defaultColor));
 
@@ -65,23 +65,4 @@
             }
         }
     };
-
-    /*
-    tyrano.plugin.kag.tag.chara_ptext.animChara = function(a, t, e) {
-        if (void 0 === this.kag.tmp.map_chara_talk_top[e]) {
-            var r = this,
-                i = parseInt(a.get(0).offsetTop);
-            a.css("top", i);
-            var s = {},
-                n = {};
-            this.kag.tmp.map_chara_talk_top[e] = !0;
-            var g = this.kag.stat.chara_talk_anim_time;
-            "up" == t ? (s.top = i - this.kag.stat.chara_talk_anim_value, n.top = i) : "down" == t && (s.top = i + this.kag.stat.chara_talk_anim_value, n.top = i), a.animate(s, g, "easeOutQuad", function () {
-                a.animate(n, g, "easeOutQuad", function () {
-                delete r.kag.tmp.map_chara_talk_top[e]
-                })
-            })
-        }
-    };
-    */
 })();
