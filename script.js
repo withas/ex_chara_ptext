@@ -58,11 +58,11 @@
                         };
                     this.kag.ftag.startTag("playse", i), this.kag.stat.map_vo.vochara[name].number = parseInt(r.number) + 1
                 }
-
-                this.kag.stat.f_chara_ptext = "true";
-                this.kag.layer.showEventLayer();
-                this.kag.ftag.nextOrder();
             }
+
+            this.kag.stat.f_chara_ptext = "true";
+            this.kag.layer.showEventLayer();
+            this.kag.ftag.nextOrder();
         }
     };
 })();
